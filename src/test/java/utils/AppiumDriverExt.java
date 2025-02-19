@@ -18,10 +18,10 @@ public class AppiumDriverExt {
 		try {
 			UiAutomator2Options caps = new UiAutomator2Options();
 			caps.setAutomationName(AutomationName.ANDROID_UIAUTOMATOR2);
-			caps.setDeviceName("Android");
-			caps.setPlatformName("emulator-5554");
-			caps.setAppPackage("com.wdiodemoapp");
-			caps.setAppActivity("com.wdiodemoapp.MainActivity");
+			caps.setDeviceName(AppiumCapabilityTypeExt.DEVICE_NAME);
+			caps.setPlatformName(AppiumCapabilityTypeExt.PLATFORM_NAME);
+			caps.setAppPackage(AppiumCapabilityTypeExt.APP_PACKAGE);
+			caps.setAppActivity(AppiumCapabilityTypeExt.APP_ACTIVITY);
 			
 			URL appiumServer = new URL("http://127.0.0.1:4725/wd/hub");
 			
