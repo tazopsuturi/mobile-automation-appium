@@ -23,14 +23,10 @@ public class AppiumDriverExt {
 			caps.setAppPackage(AppiumCapabilityTypeExt.APP_PACKAGE);
 			caps.setAppActivity(AppiumCapabilityTypeExt.APP_ACTIVITY);
 			
-			URL appiumServer = new URL("http://127.0.0.1:4725/wd/hub");
+			URL appiumServer = new URL("http://127.0.0.1:4723/wd/hub");
 			
 			androidDriver = new AndroidDriver(appiumServer, caps);
 			
-			androidDriver.manage().timeouts().implicitlyWait(50L, TimeUnit.SECONDS);
-			
-			WebElement label = androidDriver.findElement(By.xpath("//*[@content-desc='Login']"));
-			label.click();
 			
 		} catch (Exception e) {
 			e.printStackTrace();
